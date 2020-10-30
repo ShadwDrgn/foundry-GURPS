@@ -54,7 +54,8 @@
             "value": 10,
             "name": "Fatigue"
           }
-        }
+        },
+        "notes": "Advantages and arbitrary description/other info goes here."
       }
     },
     "character": {
