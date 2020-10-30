@@ -13,7 +13,6 @@ Yes. I'm sure it's just fine for many people, but the first thing I thought of w
 ### Short Term
 - Character Images/Icons
 - Advantages
-- Simple editbox on bottom of Char sheet
 - Attacks/Weapons
 
 ### Medium Term
