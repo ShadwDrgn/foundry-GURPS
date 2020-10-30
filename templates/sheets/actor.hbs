@@ -1,0 +1,57 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<div class="container metadata">
+		<h1>
+			<div><input name="name" type="text" value="{{actor.name}}" placeholder="STUFF" /></div>
+		</h1>
+		<ul class="container resources">
+			{{#each data.resources}}
+				<li class="stat box">
+					<h2>{{this.name}}</h2>
+					<div class="resource container">
+						<input name="data.resources.{{@key}}.value" type="text" value="{{this.value}}" data-dtype="Number"/>
+						 <span>/</span>
+						<input name="data.resources.{{@key}}.max" type="text" value="{{this.max}}" data-dtype="Number"/>
+					</div>
+				</li>
+			{{/each}}				
+		</ul>
+	</div>
+	<div class="container attributes frame">
+		<ul class="primary container">
+		{{#each data.primary}}
+			<li class="stat box">
+				<h3>{{this.name}}</h3>
+				<input name="data.primary.{{@key}}.value" type="text" value="{{this.value}}" data-dtype="Number"/>
+			</li>
+		{{/each}}				
+		</ul>
+		<ul class="container secondary">
+		{{#each data.secondary}}
+			<li class="stat box">
+				<h3>{{this.name}}</h3>
+				<div class="value">
+					<input name="data.secondary.{{@key}}.value" type="text" value="{{this.value}}" data-dtype="Number"/>
+				</div>
+			</li>
+		{{/each}}				
+		</ul>
+	</div>
+	<div class="frame">
+		<ul class="skills">
+			<li class="topbar">
+				<div class="item-action"></div>
+				<div class="item-name">Skill Name</div>
+				<div class="item-value">Value</div>
+				<div class="item-controls"><a class="create-item"><i class="fas fa-plus"></i>Add</a></div>
+			</li>
+			{{#each skills}}
+			<li class="item" data-itemId="{{this._id}}">
+				<div class="item-action"><a data-roll="3d6" class="item-roll"><i class="fas fa-dice-d20"></i></a></div>
+				<div class="item-name"><input class="item-edit name" data-field="name" type="text" value="{{this.name}}" /></div><div class="item-value"><input class="item-edit value" data-field="data.value" type="text" value="{{this.data.value}}" data-dtype="Number"/></div>
+				<div class="item-controls"><a class="item-delete"><i class="fas fa-trash"></i></a></div>
+			</li>
+			{{/each}}
+		</ul>
+	</div>
+	
+</form>

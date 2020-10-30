@@ -1,0 +1,26 @@
+{
+  "name": "gurps",
+  "title": "Generic Universal Role Playing System",
+  "description": "This is the worst system module ever developed",
+  "version": "0.0.1",
+  "author": "ShadwDrgn",
+  "templateVersion": 1,
+  "scripts": [],
+  "esmodules": ["gurps.js"],
+  "styles": ["gurps.css"],
+  "packs": [
+  ],
+  "languages": [
+  ],
+  "socket": true,
+  "initiative": "@abilities.secondary.bs + (@abilities.primary.dex / 100)",
+  "gridDistance": 1,
+  "gridUnits": "yard",
+  "primaryTokenAttribute": "abilities.resources.hp",
+  "secondaryTokenAttribute": null,
+  "minimumCoreVersion": "0.7.5",
+  "compatibleCoreVersion": "0.7.5",
+  "url": "https://github.com/ShadwDrgn/foundry-GURPS",
+  "manifest": "nope",
+  "download": "nope"
+}

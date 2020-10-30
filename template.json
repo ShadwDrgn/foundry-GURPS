@@ -1,0 +1,83 @@
+{
+  "Actor": {
+    "types": ["character", "npc"],
+    "templates": {
+      "common": {
+        "primary": {
+          "st": {
+            "name": "ST",
+            "value": 10
+          },
+          "dx": {
+            "name": "DX",
+            "value": 10
+          },
+          "iq": {
+            "name": "IQ",
+            "value": 10
+          },
+          "ht": {
+            "name": "HT",
+            "value": 10
+          },
+          "will": {
+            "value": 10,
+            "name": "Will"
+          },
+          "per": {
+            "value": 10,
+            "name": "Per"
+          }
+        },
+        "secondary": {
+          "bs": {
+            "value": 5.00,
+            "name": "Basic Speed"
+          },
+          "bl": {
+            "value": 20,
+            "name": "Basic Lift"
+          },
+          "bm": {
+            "value": 5,
+            "name": "Basic Move"
+          }
+        },
+        "resources": {
+          "hp": {
+            "max": 10,
+            "value": 10,
+            "name": "Hit Points"
+          },
+          "fp": {
+            "max": 10,
+            "value": 10,
+            "name": "Fatigue"
+          }
+        }
+      }
+    },
+    "character": {
+      "templates": ["common"]
+    },
+    "npc": {
+      "templates": ["common"]
+    }
+  },
+  "Item": {
+    "types": ["item", "skill"],
+    "templates": {
+      "common": {
+        "description": ""
+      }
+    },
+    "skill": {
+      "templates": ["common"],
+      "value": 1,
+      "attr": "dx"
+    },
+    "item": {
+      "templates": ["common"]
+    }
+  }
+}

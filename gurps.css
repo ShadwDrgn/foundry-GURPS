@@ -1,0 +1,184 @@
+/* global edits */
+.gurps h1 {
+	border: none;
+}
+.gurps h3 {
+	font-size: 1.3em;
+}
+.gurps h2 {
+	font-size: 1.6em;
+}
+.gurps ul {
+	padding: 0;
+	margin: 0;
+}
+.gurps input {
+	background: none;
+	border: none;
+}
+.gurps input:hover {
+	box-shadow: 0 0 8px red;
+	border: 1px solid black;
+}
+.gurps input:focus {
+	box-shadow: 0 0 8px red;
+	border: 1px solid black;	
+}
+.gurps ul {
+	list-style-type: none;
+}
+.gurps .container {
+	display: flex;
+}
+.gurps .frame {
+	flex-direction: row;
+	border-top: 2px groove #eeede0;
+}
+.gurps .frame:last-child {
+	flex-direction: row;
+	border-top: 2px groove #eeede0;
+	border-bottom: 2px groove #eeede0;
+}
+.gurps .box {
+	border-right: 2px groove #eeede0;
+}
+.gurps .box:last-child {
+	border-right: none;
+}
+.gurps .frame .container {
+	border-right: 2px groove #eeede0;
+}
+.gurps .frame .container:last-child {
+	border-right: none;
+}
+.gurps i.edit {
+	content: "\f044";
+}
+.gurps i.trash {
+	content: "\f1f8";
+}
+
+
+/* main container should be flex */
+.gurps form {
+	display: flex;
+	flex-direction: column;
+}
+
+/* metadata */
+.gurps .metadata h1 {
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+}
+.gurps .metadata h1 div {
+	margin: 0 auto;
+	flex-grow: 1;
+	flex-basis: 100%;
+}
+.gurps .metadata h1 input {
+	text-align: center;
+	height: 40px;
+}
+.gurps 
+.gurps ul.resources {
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+.gurps .metadata .resources {
+	align-items: center;
+	margin: 0 auto;
+	font-size: 1.3em;
+}
+.gurps .metadata .resources .stat h2 {
+	border-bottom: 2px solid gray;
+	text-align: center;
+	font-weight: 200;
+	margin: 2px 8px 6px;
+}
+.gurps .metadata .resources .resource {
+	margin-bottom: 4px;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+/* All attributes */
+.gurps .stat {
+	flex-direction: column;
+	align-items: center;
+}
+.gurps ul.primary {
+	flex: 0 0 40%;
+}
+.gurps ul.secondary {
+	flex: 0 0 60%;
+}
+.gurps .attributes ul li {
+	flex-basis: auto;
+	flex-grow: 1;
+}
+.gurps .stat h3 {
+	border-bottom: 2px solid gray;
+	text-align: center;
+	font-weight: 200;
+	margin: 2px 8px 4px;
+}
+.gurps .stat input {
+	width: 32px;
+	height: 32px;
+	margin: 0 auto;
+	display: block;
+	line-height: 32px;
+	text-align: center;
+}
+
+
+/* Skills */
+.gurps ul.skills {
+	display: flex;
+	flex-direction: column;
+}
+.gurps ul.skills li.item {
+	display: flex;
+}
+.gurps ul.skills li.item:nth-child(odd) {
+  background: #eeede0;
+}
+.gurps ul.skills li div {
+	display: flex;
+	/*flex: 0 0 46px;*/
+	align-items: center;
+}
+.gurps ul.skills li.topbar {
+	border-bottom: 2px groove #eeede0;
+	border-top: 2px groove #eeede0;
+	display: flex;
+	height: 26px;
+	background: rgba(0, 0, 0, 0.05);
+}
+.gurps ul.skills li.topbar div {
+	border-right: 2px groove #eeede0;
+}
+.gurps ul.skills li.topbar div:last-child {
+	border-right: none;
+}
+.gurps ul.skills li.topbar div {
+	color: #7a7971;
+	padding: 0 4px;
+}
+.gurps ul.skills li div.item-name {
+	flex: 1 1 auto;
+}
+.gurps ul.skills div.item-action {
+	flex: 0 0 26px;
+}
+.gurps ul.skills li div.item-value {
+	flex: 0 0 45px;
+}
+.gurps ul.skills li div.item-controls {
+	flex: 0 0 46px;
+}
+.gurps ul.skills a {
+	color: #7a7971;
+	margin: 0 auto;
+}
