@@ -13,10 +13,10 @@
   "languages": [
   ],
   "socket": true,
-  "initiative": "@abilities.secondary.bs + (@abilities.primary.dex / 100)",
+  "initiative": "@secondary.bs.value + (@primary.dx.value/100) + (1d100-1)/1000",
   "gridDistance": 1,
   "gridUnits": "yard",
-  "primaryTokenAttribute": "abilities.resources.hp",
+  "primaryTokenAttribute": "resources.hp",
   "secondaryTokenAttribute": null,
   "minimumCoreVersion": "0.7.5",
   "compatibleCoreVersion": "0.7.5",
