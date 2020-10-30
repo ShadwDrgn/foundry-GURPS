@@ -20,6 +20,5 @@ Yes. I'm sure it's just fine for many people, but the first thing I thought of w
 - More Skill/Roll automation features
 - Ritual Path Magic automation (gathering energy)
 
-### Long Term
-- Other Equipment
-- Anything else I think of
+### Other plans
+There are other roadmap items in the issues section labeled as enhancements.
