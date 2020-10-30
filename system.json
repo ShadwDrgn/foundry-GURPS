@@ -21,6 +21,6 @@
   "minimumCoreVersion": "0.7.5",
   "compatibleCoreVersion": "0.7.5",
   "url": "https://github.com/ShadwDrgn/foundry-GURPS",
-  "manifest": "nope",
-  "download": "nope"
+  "manifest": "https://raw.githubusercontent.com/ShadwDrgn/foundry-GURPS/master/system.json",
+  "download": "https://github.com/ShadwDrgn/foundry-GURPS/archive/v0.0.1.zip"
 }
