@@ -6,13 +6,18 @@
         	<div class="box">
 	        	<label>Attribute:</label>
 	   		    <select name="data.attr">
+	   		    	<option value="{{data.attr}}" hidden="hidden" selected="selected">{{data.attr}}</option>
 			        <option value="dx">DX</option>
 			        <option value="iq">IQ</option>
+			        <option value="will">Will</option>
+			        <option value="per">Per</option>
 			    </select>
 			</div>
 		    <div class="label box">
 		    	<label>Value:</label>
-		    	<div><span>{{data.value}}</span></div>
+		    	<div>
+		    		<input name="data.value" type="text" value="{{data.value}}" placeholder="10"/>
+		    	</div>
 		    </div>
 		    <div class="dice box">
 		    	<div><i class="fa fa-dice-d20"></i></div>
