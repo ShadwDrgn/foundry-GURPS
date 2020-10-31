@@ -3,10 +3,10 @@
 	border: none;
 }
 .gurps h3 {
-	font-size: 1.3em;
+	border: none;
 }
 .gurps h2 {
-	font-size: 1.6em;
+	border: none;
 }
 .gurps ul {
 	padding: 0;
@@ -188,4 +188,45 @@
 }
 .gurps div.frame.notes .editor {
 	height: 100%
+}
+
+
+/* Item Sheet */
+.gurps.sheet.item .sheet-header {
+	flex-wrap: nowrap;
+}
+.gurps.sheet.item .name {
+	flex: 1 0 80px;
+}
+.gurps.sheet.item .attr {
+	flex: 0 0 0%;
+	display: flex;
+    align-items: center;
+}
+.gurps.sheet.item .attr .box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 6px;
+	height: 50px;
+}
+.gurps.sheet.item .attr div.label {
+	display: flex;
+	flex-direction: column;
+}
+.gurps.sheet.item .attr span {
+	font-size: 1.9em;
+}
+.gurps.sheet.item .box.dice {
+	font-size: 1.8em;
+	flex-direction: row;
+}
+.gurps.sheet.item .box.dice div {
+	display: flex;
+	margin: 0 4px;
+}
+.gurps.sheet.item .topbar {
+	display: flex;
+	align-items: center;
+	font-size: 1.3em;
 }
