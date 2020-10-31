@@ -225,8 +225,25 @@
 	display: flex;
 	margin: 0 4px;
 }
-.gurps.sheet.item .topbar {
+.gurps.sheet.item ul {
 	display: flex;
+	flex-direction: column;
+	padding-top: 4px;
+	margin-top: 4px;
+	border-bottom: 2px groove;
+}
+.gurps.sheet.item ul li {
+	display: flex;
+	flex-direction: row;
+	flex: 0 0 24px;
 	align-items: center;
-	font-size: 1.3em;
+ }
+.gurps.sheet.item ul li:nth-child(odd) {
+  background: #eeede0;
+}
+.gurps.sheet.item ul li.topbar {
+	border-bottom: 2px groove #eeede0;
+	border-top: 2px groove #eeede0;
+	display: flex;
+	background: rgba(0, 0, 0, 0.05);
 }
