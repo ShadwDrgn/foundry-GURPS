@@ -8,7 +8,7 @@
 .gurps h2 {
 	border: none;
 }
-.gurps ul {
+.gurps ul:not(.editor-content ul) {
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
@@ -233,23 +233,23 @@
 	display: flex;
 	margin: 0 4px;
 }
-.gurps.sheet.item ul {
+.gurps.sheet.item ul.modifiers {
 	display: flex;
 	flex-direction: column;
 	padding-top: 4px;
 	margin-top: 4px;
 	border-bottom: 2px groove;
 }
-.gurps.sheet.item ul li {
+.gurps.sheet.item ul.modifiers li {
 	display: flex;
 	flex-direction: row;
 	flex: 0 0 24px;
 	align-items: center;
  }
-.gurps.sheet.item ul li:nth-child(odd) {
+.gurps.sheet.item ul.modifiers li:nth-child(odd) {
   background: #eeede0;
 }
-.gurps.sheet.item ul li.topbar {
+.gurps.sheet.item ul.modifiers li.topbar {
 	border-bottom: 2px groove #eeede0;
 	border-top: 2px groove #eeede0;
 	display: flex;
