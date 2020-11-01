@@ -11,7 +11,7 @@ Yes. I'm sure it's just fine for many people, but the first thing I thought of w
 ## TODO
 
 ### Short Term
-- Character Images/Icons
+- ~~Character Images/Icons~~ (done)
 - Advantages
 - Attacks/Weapons
 
