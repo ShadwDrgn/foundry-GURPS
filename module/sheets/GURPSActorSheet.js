@@ -9,7 +9,9 @@ export default class GURPSActorSheet extends ActorSheet {
 		html.find('.item-edit').change(this._onSkillEdit.bind(this));
 		html.find('.item-delete').click(this._onItemDelete.bind(this));
 		html.find('.item-roll').click(this._onRoll.bind(this));
+		html.find('.stat-roll').click(this._onRoll.bind(this));
 		html.find('.create-item').click(this._onItemCreate.bind(this));
+		html.find('.action-edit').click(this._onSkillAction.bind(this));
 	}
 	/** @override */
 	getData() {
@@ -19,6 +21,13 @@ export default class GURPSActorSheet extends ActorSheet {
 	}
 	get template() {
 		return `systems/gurps/templates/sheets/actor.hbs`;
+	}
+	_onSkillAction(event) {
+		event.preventDefault();
+		let element = event.currentTarget;
+		let itemId = element.closest(".item").dataset.itemid;
+		let item = this.actor.getOwnedItem(itemId);
+		item.sheet.render(true);
 	}
 	_onSkillEdit(event) {
 		event.preventDefault();
@@ -46,22 +55,33 @@ export default class GURPSActorSheet extends ActorSheet {
 	_onRoll(event) {
 		event.preventDefault();
 		const element = event.currentTarget;
-		const itemId = element.closest(".item").dataset.itemid;
-		const item = this.actor.getOwnedItem(itemId);
-		const value = item.data.data.value;
 		const dataset = element.dataset;
+		var value, itemId, item, name;
 
-	  if (dataset.roll) {
-	    let roll = new Roll(dataset.roll, this.actor.data.data).roll();
-	    let result = roll.results[0];
-	    const margin = value - result;
-	    let msg = "Rolling " + item.name + ".<br />";
-	    msg += (roll.results[0] <= value) ? "Success by " + margin : "Fail by " + margin;
-	    msg += ".";
-	    roll.toMessage({
-	      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-	      flavor: msg
-	    });
+		if (typeof dataset.value !== 'undefined') {
+			value = dataset.value;
+			name = dataset.name;
+			console.log(value);
+		} else {
+			itemId = element.closest(".item").dataset.itemid;
+			item = this.actor.getOwnedItem(itemId);
+			name = item.name;
+			value = item.data.data.value;
+			console.log(value);
+		}
+		console.log("Got: " + value);
+
+		if (dataset.roll) {
+		let roll = new Roll(dataset.roll, this.actor.data.data).roll();
+		let result = roll.results[0];
+		const margin = value - result;
+		let msg = "Rolling against " + name + "(" + value + ").<br />";
+		msg += (roll.results[0] <= value) ? '<span class="gurps success">Success</span> by ' + margin : '<span class="gurps failure">Failure</span> by ' + margin;
+		msg += ".";
+		roll.toMessage({
+			speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+			flavor: msg
+		});
 	  }
 
 	}

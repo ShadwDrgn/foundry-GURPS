@@ -9,7 +9,6 @@
 	border: none;
 }
 .gurps ul {
-	list-style-type: none;
 	padding: 0;
 	margin: 0;
 }
@@ -24,6 +23,9 @@
 .gurps input:focus {
 	box-shadow: 0 0 8px red;
 	border: 1px solid black;	
+}
+.gurps ul {
+	list-style-type: none;
 }
 .gurps .container {
 	display: flex;
@@ -77,7 +79,6 @@
 .gurps .metadata h1 input {
 	text-align: center;
 	height: 40px;
-	margin: 0 6px;
 }
 .gurps 
 .gurps ul.resources {
@@ -134,29 +135,26 @@
 
 /* Skills */
 .gurps ul.skills {
-	display: grid;
-	grid-template-areas:
-	"header header header"
-	"one two three";
-	grid-template-columns: 1fr 1fr 1fr;
-	margin-top: 4px;
-	margin-bottom: 4px;
-}
-.gurps ul.skills li:first-child {
-	grid-area: header;
 	display: flex;
-	color: #7a7971;
+	flex-direction: column;
+}
+.gurps ul.skills li.item {
+	display: flex;
+}
+.gurps ul.skills li.item:nth-child(odd) {
+  background: #eeede0;
+}
+.gurps ul.skills li div {
+	display: flex;
+	/*flex: 0 0 46px;*/
+	align-items: center;
+}
+.gurps ul.skills li.topbar {
 	border-bottom: 2px groove #eeede0;
 	border-top: 2px groove #eeede0;
+	display: flex;
 	height: 26px;
 	background: rgba(0, 0, 0, 0.05);
-	padding: 0 4px;
-}
-.gurps ul.skills li {
-	border: 2px groove;
-	display: flex;
-	align-items: center;
-	min-height: 24px;
 }
 .gurps ul.skills li.topbar div {
 	border-right: 2px groove #eeede0;
@@ -164,18 +162,23 @@
 .gurps ul.skills li.topbar div:last-child {
 	border-right: none;
 }
+.gurps ul.skills li.topbar div {
+	color: #7a7971;
+	padding: 0 4px;
+}
+.gurps ul.skills li div.item-name {
+	flex: 1 1 auto;
+}
 .gurps ul.skills div.item-action {
 	flex: 0 0 26px;
 }
-.gurps ul.skills .name {
-	flex: 1 0 70%;
+.gurps ul.skills li div.item-value {
+	flex: 0 0 45px;
 }
 .gurps ul.skills li div.item-controls {
-	flex: 0 0 52px;
-	display: flex;
-	align-items: center;
+	flex: 0 0 46px;
 }
-.gurps ul.skills li div.item-controls a {
+.gurps ul.skills a {
 	color: #7a7971;
 	margin: 0 auto;
 }
@@ -184,24 +187,13 @@
 	flex-grow: 1;
 }
 .gurps div.frame.notes .editor {
-	height: 100%;
-	margin-top: 6px;
+	height: 100%
 }
 
 
 /* Item Sheet */
 .gurps.sheet.item .sheet-header {
 	flex-wrap: nowrap;
-}
-.gurps.sheet.item .desc {
-	height: 100%;
-	min-height: 100px;
-}
-.gurps.sheet.item .tox.tox-tinymce {
-    min-height: 100%;
-}
-.gurps.sheet.item .editor {
-	height: 100%;
 }
 .gurps.sheet.item .name {
 	flex: 1 0 80px;
@@ -254,15 +246,4 @@
 	border-top: 2px groove #eeede0;
 	display: flex;
 	background: rgba(0, 0, 0, 0.05);
-}
-.gurps ul.skills li.item .value {
-    margin: 0 3px;
-}
-.flavor-text .gurps.success {
-	font-size: 1.3em;
-	color: green;
-}
-.flavor-text .gurps.failure {
-	font-size: 1.3em;
-	color: red;
 }
