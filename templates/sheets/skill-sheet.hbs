@@ -20,7 +20,7 @@
 		    	</div>
 		    </div>
 		    <div class="dice box">
-		    	<div class="total">+1</div><div>=</div><div>16</div>
+		    	<div class="total">+3</div><div>=</div><div>15</div>
 		    </div>
 		    <div class="box dice">
 		    	<div><i class="fa fa-dice-d20"></i></div>
@@ -31,9 +31,12 @@
     	<li class="topbar">
     		<div>Modifiers:</div>
     	</li>
-    	<li>
-    		<div>Some modifier here - +1</div>
+        {{#each mod_items }}
+    	<li class="modifier">
+            <div class="name">{{this.name}}</div>
+            <div class="value">{{this.data.data.value}}</div>
     	</li>
+        {{/each}}
     	<li>
     		<div></div>
     	</li>

@@ -75,7 +75,8 @@
     "skill": {
       "templates": ["common"],
       "value": 1,
-      "attr": "dx"
+      "attr": "dx",
+      "modifiers": []
     },
     "modifier": {
       "templates": ["common"],
